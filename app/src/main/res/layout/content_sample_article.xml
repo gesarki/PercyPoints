@@ -2,8 +2,8 @@
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.edgar.percypoints.sample_article"
     tools:showIn="@layout/activity_sample_article">
@@ -16,36 +16,33 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
             android:text="Looking at the big wide world of stocks, it's easy to get confused and that's okay. Warren Buffett started somewhere and so will you. This will be just the first of many steps to being a smart and engaged investor.
 
-                So what are stocks?
+So what are stocks?
 
-                Well, a stock is a share of a company held by an individual or group. If Joey buys some Apple (APPL) stocks, that would mean that Joey is partly an owner of Apple! Pretty cool huh?
+Well, a stock is a share of a company held by an individual or group. If Joey buys some Apple (APPL) stocks, that would mean that Joey is partly an owner of Apple! Pretty cool huh?
 
-                Depending on the performance of Apple or the climate of the stock market, the price of the stocks that Joey bought could either rise or fall. To make a profit out of stock trading, Joey would want to buy when the price is low, and sell when the price is high.
+Depending on the performance of Apple or the climate of the stock market, the price of the stocks that Joey bought could either rise or fall. To make a profit out of stock trading, Joey would want to buy when the price is low, and sell when the price is high.
 
-                Now that you know what stocks are, you should know the types of stocks: Preferred and Common stocks.
+Now that you know what stocks are, you should know the types of stocks: Preferred and Common stocks.
 
-                Here is a diagram to show the main differences between the two stocks."/>
+Here is a diagram to show the main differences between the two stocks." />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
             android:layout_margin="@dimen/text_margin"
             android:contentDescription="Stock Comparison Table"
-            app:srcCompat="@drawable/Stocks"/>
-
+            app:srcCompat="@drawable/Stocks" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/text_margin"
             android:text="Usually people buy common stocks as it provides more return despite the increased risk.
 
-        Now you can say you have taken your first official steps into the stock market. If you believe that your favourite company is going to do well, you should buy their stocks and see the prices go way way up along with your investment!
-        Remember to never stop learning and to know that everyone takes losses sometimes but it's all part of the learning experience. Happy trading!
-        "/>
+Now you can say you have taken your first official steps into the stock market. If you believe that your favourite company is going to do well, you should buy their stocks and see the prices go way way up along with your investment!
+        Remember to never stop learning and to know that everyone takes losses sometimes but it's all part of the learning experience. Be sure to check out more tips and tricks on Investor's Edge.  Happy trading!
+        " />
     </LinearLayout>
 
 
