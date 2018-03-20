@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:title="@string/option_1"
+            android:icon="@mipmap/ic_launcher_round"/>
+
+            <!--mipmap-mdpi/ic_launcher.png
+        mipmap-xxxhdpi/ic_launcher.png
+        mipmap-hdpi/ic_launcher.png
+        mipmap-xhdpi/ic_launcher.png
+        mipmap-xxhdpi/ic_launcher.png-->
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/option_2" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/option_3" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@mipmap/ic_launcher_round"
+            android:title="@string/option_1" />
+    </group>
+
+</menu>
