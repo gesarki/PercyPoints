@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".sample_article"
+            android:label="@string/title_activity_sample_article"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
