@@ -9,21 +9,17 @@ import android.widget.ImageView;
 public class chooseQuizOrArticle extends AppCompatActivity {
 
     ImageView imageView;
+    static final int QUIZ_TIME = 1;  // The request code
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_quiz_or_article);
-
-        //imageView = (ImageView) findViewById(R.id.first_card_image);
-        //imageView.setBackgroundColor(000000);
-
-
     }
 
     public void startQuiz(View view) {
         Intent intent = new Intent(this, Quiz.class);
-        startActivity(intent);
+        startActivityForResult(intent, QUIZ_TIME);
     }
 
 

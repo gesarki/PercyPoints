@@ -18,10 +18,7 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the user taps the Send button */
     public void startQuiz(View view) {
         Intent intent = new Intent(this, Quiz.class);
-
         startActivityForResult(intent, QUIZ_TIME);
-
-
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
