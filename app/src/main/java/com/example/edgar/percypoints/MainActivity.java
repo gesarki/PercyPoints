@@ -9,16 +9,21 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     static final int QUIZ_TIME = 1;  // The request code
+    public static int pointCount;
+    public static TextView numPoints;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        pointCount = 0;
+        numPoints = (TextView) findViewById(R.id.numPoints);
     }
     /** Called when the user taps the Send button */
     public void startQuiz(View view) {
         Intent intent = new Intent(this, Quiz.class);
         startActivityForResult(intent, QUIZ_TIME);
+
 
     }
     @Override
@@ -27,16 +32,21 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == QUIZ_TIME) {
             // Make sure the request was successful
             if (resultCode == RESULT_OK) {
-                TextView numPoints = (TextView) findViewById(R.id.numPoints);
-                int number = Integer.parseInt(numPoints.getText().toString());
-                number += 4;
-                numPoints.setText(Integer.toString(number));
+                  //TextView numPoints = (TextView) findViewById(R.id.numPoints);
+//                  numPoints.setText(Integer.toString(pointCount));
+//                int number = Integer.parseInt(numPoints.getText().toString());
+//                number += 4;
+//                numPoints.setText(Integer.toString(number));
             }
         }
     }
     public void startExtraPts(View view) {
         Intent intent = new Intent(this, chooseQuizOrArticle.class);
         startActivityForResult(intent, QUIZ_TIME);
+    }
+    public static void changePoints(){
+        pointCount += 4;
+        numPoints.setText(Integer.toString(pointCount));
     }
 
 
