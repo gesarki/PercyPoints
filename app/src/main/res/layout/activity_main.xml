@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.example.edgar.percypoints.MainActivity">
 
-<<<<<<< HEAD
         <TextView
             android:id="@+id/numPoints"
             android:layout_width="wrap_content"
@@ -74,10 +73,6 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintVertical_bias="0.602" />
->>>>>>> Rough Quiz
-=======
         app:layout_constraintVertical_bias="0.744" />
 
     <TextView
@@ -130,6 +125,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.602" />
->>>>>>> df29d367f1c6aae3591991db9d730208cd1d9a10
-
 </android.support.constraint.ConstraintLayout>

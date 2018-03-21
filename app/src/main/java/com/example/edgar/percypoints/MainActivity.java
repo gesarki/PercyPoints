@@ -18,14 +18,8 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the user taps the Send button */
     public void startQuiz(View view) {
         Intent intent = new Intent(this, Quiz.class);
-<<<<<<< HEAD
-        startActivityForResult(intent, QUIZ_TIME);
-=======
-
         startActivityForResult(intent, QUIZ_TIME);
 
-
->>>>>>> df29d367f1c6aae3591991db9d730208cd1d9a10
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -39,13 +33,10 @@ public class MainActivity extends AppCompatActivity {
                 numPoints.setText(Integer.toString(number));
             }
         }
-<<<<<<< HEAD
     }
     public void startExtraPts(View view) {
         Intent intent = new Intent(this, chooseQuizOrArticle.class);
-        startActivity(intent);
-=======
->>>>>>> df29d367f1c6aae3591991db9d730208cd1d9a10
+        startActivityForResult(intent, QUIZ_TIME);
     }
 
 
