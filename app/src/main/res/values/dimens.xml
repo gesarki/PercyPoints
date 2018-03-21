@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_height">50</dimen>
+    <dimen name="text_size">15dp</dimen>
+    <dimen name="icon_width">30</dimen>
+    <dimen name="icon_height">10</dimen>
+    <dimen name="icon_padding">16</dimen>
+</resources>
