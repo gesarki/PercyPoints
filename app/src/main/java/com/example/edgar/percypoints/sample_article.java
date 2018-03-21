@@ -12,7 +12,5 @@ public class sample_article extends AppCompatActivity {
         setContentView(R.layout.activity_sample_article);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
     }
 }

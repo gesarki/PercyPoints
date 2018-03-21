@@ -100,9 +100,18 @@ public class MainActivity extends AppCompatActivity {
     public void startExtraPts(View view) {
         Intent intent = new Intent(this, chooseQuizOrArticle.class);
         startActivityForResult(intent, QUIZ_TIME);
+        refreshPoint();
     }
+    public void redeemPoints(View view){
+        Intent intent = new Intent(this, Redemption.class);
+        startActivity(intent);
+    }
+
     public static void changePoints(){
         pointCount += 4;
+        numPoints.setText(Integer.toString(pointCount));
+    }
+    public static void refreshPoint(){
         numPoints.setText(Integer.toString(pointCount));
     }
 
