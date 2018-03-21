@@ -9,11 +9,12 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     static final int QUIZ_TIME = 1;  // The request code
-
+    private DatabaseHelper db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        db = new DatabaseHelper(this);
     }
     /** Called when the user taps the Send button */
     public void startQuiz(View view) {
@@ -37,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
     public void startExtraPts(View view) {
         Intent intent = new Intent(this, chooseQuizOrArticle.class);
         startActivityForResult(intent, QUIZ_TIME);
+    }
+
+    public void insertPoints(){
+        // inserting note in db and getting
+        // newly inserted note id
+        long id = db.insertPoint(0);
+
+        // get the newly inserted note from db
+        PointTracker n = db.getPoint(id);
     }
 
 
