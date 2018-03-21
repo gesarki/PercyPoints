@@ -1,6 +1,7 @@
 package com.example.edgar.percypoints;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.util.Log;
@@ -10,7 +11,9 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
@@ -19,6 +22,8 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -42,7 +47,8 @@ class CustomListAdapter extends ArrayAdapter<ActivityCard> {
         ImageView image;
         TextView activityType;
         TextView pts;
-        CardView startButton;
+        Button startButton;
+        RelativeLayout card;
     }
 
     /**
@@ -69,7 +75,10 @@ class CustomListAdapter extends ArrayAdapter<ActivityCard> {
         String title = getItem(position).getActivityName();
         String imgUrl = getItem(position).getImgUrl();
         int pts = getItem(position).getPts();
-        card
+        String activityType = getItem(position).getActivityType();
+        final Class<?> intentClass = getItem(position).getIntentClass();
+        int color = getItem(position).getBackgroundColor();
+
 
 
         try {
@@ -87,6 +96,10 @@ class CustomListAdapter extends ArrayAdapter<ActivityCard> {
                 holder = new ViewHolder();
                 holder.title = (TextView) convertView.findViewById(R.id.cardTitle);
                 holder.image = (ImageView) convertView.findViewById(R.id.cardImage);
+                holder.startButton = (Button) convertView.findViewById(R.id.startButton);
+                holder.pts = (TextView) convertView.findViewById(R.id.cardPts);
+                holder.activityType = (TextView) convertView.findViewById(R.id.cardType);
+                holder.card = (RelativeLayout) convertView.findViewById(R.id.relView);
 
                 result = convertView;
 
@@ -103,6 +116,14 @@ class CustomListAdapter extends ArrayAdapter<ActivityCard> {
             lastPosition = position;
 
             holder.title.setText(title);
+            holder.activityType.setText(activityType);
+            holder.pts.setText(Integer.toString(pts));
+            holder.card.setBackgroundColor(color);
+            holder.startButton.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(),intentClass);
+                }
+            });
 
             //create the imageloader object
             ImageLoader imageLoader = ImageLoader.getInstance();
