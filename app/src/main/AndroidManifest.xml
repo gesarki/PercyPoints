@@ -16,10 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".sample_article"
             android:label="Stocks 101"
             android:theme="@style/AppTheme.NoActionBar"/>
+=======
+        <activity android:name=".Quiz" />
+        <activity android:name=".chooseQuizOrArticle"></activity>
+>>>>>>> master
     </application>
 
 </manifest>
