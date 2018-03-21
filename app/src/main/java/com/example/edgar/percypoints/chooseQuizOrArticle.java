@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class chooseQuizOrArticle extends AppCompatActivity {
 
@@ -21,6 +22,5 @@ public class chooseQuizOrArticle extends AppCompatActivity {
         Intent intent = new Intent(this, Quiz.class);
         startActivityForResult(intent, QUIZ_TIME);
     }
-
 
 }
