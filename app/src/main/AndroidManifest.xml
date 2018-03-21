@@ -19,9 +19,11 @@
         <activity
             android:name=".sample_article"
             android:label="Stocks 101"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Quiz" />
-        <activity android:name=".chooseQuizOrArticle"></activity>
+        <activity android:name=".chooseQuizOrArticle" />
+        <activity android:name=".Redemption" />
+        <activity android:name=".Barcode"></activity>
     </application>
 
 </manifest>
