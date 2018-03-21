@@ -17,6 +17,11 @@ android {
         }
     }
 }
+repositories {
+    maven {
+        url 'https://jitpack.io'
+    }
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -26,6 +31,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.bmarrdev:android-DecoView-charting:v0.9.3' // for data visualization
     testCompile 'junit:junit:4.12'
     implementation 'com.android.support:cardview-v7:27.1.0'
 }
