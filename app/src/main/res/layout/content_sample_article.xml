@@ -27,7 +27,7 @@
             android:layout_height="200dp"
             android:layout_margin="@dimen/text_margin"
             android:contentDescription="@string/stock_table"
-            app:srcCompat="@drawable/stocks" />
+            app:srcCompat="@drawable/stock_table" />
 
         <TextView
             android:layout_width="match_parent"

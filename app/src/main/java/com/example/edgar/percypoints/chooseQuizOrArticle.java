@@ -21,6 +21,7 @@ public class chooseQuizOrArticle extends AppCompatActivity {
     public void startQuiz(View view) {
         Intent intent = new Intent(this, Quiz.class);
         startActivityForResult(intent, QUIZ_TIME);
+        MainActivity.changePoints();
     }
 
 }
