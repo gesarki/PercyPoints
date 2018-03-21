@@ -18,7 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="@string/paragraph1" />
+            android:text="@string/paragraph1"
+            android:textSize="9pt"/>
 
         <ImageView
             android:id="@+id/imageView"
@@ -32,7 +33,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
-            android:text="@string/paragraph2" />
+            android:text="@string/paragraph2"
+            android:textSize="9pt"/>
 
     </LinearLayout>
 
