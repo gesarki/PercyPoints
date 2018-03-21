@@ -1,10 +1,9 @@
 package com.example.edgar.percypoints;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +18,13 @@ public class MainActivity extends AppCompatActivity {
         pointCount = 0;
         numPoints = (TextView) findViewById(R.id.numPoints);
     }
+
+    // for future implimentation of article card
+    //public void openSampleArticle(View view) {
+    //    Intent intent = new Intent(this, sample_article.class);
+    //    startActivity(intent);
+    //}
+
     /** Called when the user taps the Send button */
     public void startQuiz(View view) {
         Intent intent = new Intent(this, Quiz.class);
@@ -50,4 +56,4 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    }
+}
