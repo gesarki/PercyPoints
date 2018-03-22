@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#af0b1c</color>
     <color name="colorPrimaryDark">#930a18</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#d40139</color>
     <color name="P1">#f6e88f</color>
     <color name="CIBCGreen">#74A855</color>
     <color name="CIBCTurquoise">#00C1B5</color>
