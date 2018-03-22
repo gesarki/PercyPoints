@@ -37,7 +37,6 @@
         android:text="Support small businesses!"
         android:backgroundTint="@color/colorPrimary"
         android:textColor="@android:color/white"
-        master
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"

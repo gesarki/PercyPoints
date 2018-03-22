@@ -36,7 +36,7 @@
                     android:layout_below="@+id/cardImage"
                     android:maxLines="3"
                     android:padding="8dp"
-                    android:textColor="#222"
+                    android:textColor="#FFF"
                     android:textSize="22dp"
                     android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
                     android:layout_below="@+id/cardTitle"
                     android:maxLines="3"
                     android:padding="8dp"
-                    android:textColor="#666"
+                    android:textColor="#FFF"
                     android:textSize="14dp" />
 
                 <TextView

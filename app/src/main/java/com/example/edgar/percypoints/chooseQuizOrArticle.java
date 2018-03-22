@@ -10,8 +10,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import static android.graphics.Color.rgb;
+
+
+
 
 
 public class chooseQuizOrArticle extends AppCompatActivity {
@@ -19,27 +23,32 @@ public class chooseQuizOrArticle extends AppCompatActivity {
     static final int QUIZ_TIME = 1;  // The request code
 
     private ListView listView;
+    String images [] = {"drawable://" + R.drawable.percy_couch, "drawable://" + R.drawable.percy_ball, "drawable://" + R.drawable.percy_happy,
+            "drawable://" + R.drawable.percy_vacay, "drawable://" + R.drawable.percy_palm, "drawable://" + R.drawable.percy_other_couch,
+            "drawable://" + R.drawable.percy_mailbox, "drawable://" + R.drawable.cibc_percy};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listview_layout);
 
+        Random rand = new Random();
+
         listView = (ListView) findViewById(R.id.listView);
 
         ArrayList<ActivityCard> list = new ArrayList<>();
         list.add(new ActivityCard(rgb(0,167,206),
-                "drawable://" + R.drawable.percy_couch,
+                images[rand.nextInt(8)],
                 "Test Your ETF Knowledge!",
                 "Quiz", 4, Quiz.class));
 
         list.add(new ActivityCard(rgb(0,193,181),
-                "drawable://" + R.drawable.cibc_percy,
+                images[rand.nextInt(8)],
                 "Learn About Stocks!",
                 "Article", 10,sample_article.class));
 
         list.add(new ActivityCard(rgb(116,168,85),
-                "drawable://" + R.drawable.percy_reward,
+                images[rand.nextInt(8)],
                 "Learn About Stocks!",
                 "Article", 10,Quiz.class)); //TODO: CHANGE THIS TO THE ARTICLE
 
