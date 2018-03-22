@@ -51,7 +51,8 @@
         app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.739" />
+        app:layout_constraintVertical_bias="0.739"
+        android:background="@drawable/roundsquare2"/>
 
     <Button
         android:id="@+id/answer2"
@@ -67,7 +68,8 @@
         app:layout_constraintHorizontal_bias="0.914"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.739" />
+        app:layout_constraintVertical_bias="0.739"
+        android:background="@drawable/roundsquare2"/>
 
     <Button
         android:id="@+id/answer3"
@@ -83,7 +85,8 @@
         app:layout_constraintHorizontal_bias="0.126"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="0.98"
+        android:background="@drawable/roundsquare2"/>
 
     <Button
         android:id="@+id/answer4"
@@ -99,7 +102,8 @@
         app:layout_constraintHorizontal_bias="0.915"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="0.98"
+        android:background="@drawable/roundsquare2"/>
 
     <Button
         android:id="@+id/startButton"
