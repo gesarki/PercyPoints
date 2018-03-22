@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     public static int currLevel = 60;
     public static int nextLevel = 100;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
