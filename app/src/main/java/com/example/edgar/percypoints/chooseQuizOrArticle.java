@@ -16,7 +16,6 @@ import static android.graphics.Color.rgb;
 
 public class chooseQuizOrArticle extends AppCompatActivity {
 
-    ImageView imageView;
     static final int QUIZ_TIME = 1;  // The request code
 
     private ListView listView;
@@ -31,13 +30,13 @@ public class chooseQuizOrArticle extends AppCompatActivity {
         ArrayList<ActivityCard> list = new ArrayList<>();
         list.add(new ActivityCard(rgb(0,167,206),
                 "drawable://" + R.drawable.percy_couch,
-                "Test Your EFT Knowledge!",
+                "Test Your ETF Knowledge!",
                 "Quiz", 4, Quiz.class));
 
         list.add(new ActivityCard(rgb(0,193,181),
                 "drawable://" + R.drawable.cibc_percy,
                 "Learn About Stocks!",
-                "Article", 10,Quiz.class)); //TODO: CHANGE THIS TO THE ARTICLE
+                "Article", 10,sample_article.class));
 
         list.add(new ActivityCard(rgb(116,168,85),
                 "drawable://" + R.drawable.percy_reward,
@@ -51,10 +50,5 @@ public class chooseQuizOrArticle extends AppCompatActivity {
 
     }
 
-    public void startQuiz(View view) {
-        Intent intent = new Intent(this, Quiz.class);
-        startActivityForResult(intent, QUIZ_TIME);
-        MainActivity.changePoints();
-    }
 
 }
