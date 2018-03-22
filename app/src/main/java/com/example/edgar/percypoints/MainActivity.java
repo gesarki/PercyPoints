@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         int backIndex = decoView.addSeries(seriesItem);
 
-        final SeriesItem seriesItem2 = new SeriesItem.Builder(Color.parseColor("#af0b1c"))
+        final SeriesItem seriesItem2 = new SeriesItem.Builder(Color.parseColor("#fca311"))
                 .setRange(0, 100, 0)
                 .build();
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         decoView.addEvent(new DecoEvent.Builder(62)
                 .setIndex(series1Index)
-                .setDelay(5000)
+                .setDelay(2000)
                 .build());
 
     }
