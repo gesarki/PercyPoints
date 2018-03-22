@@ -15,7 +15,7 @@ public class ActivityCard {
     private int pts;
     private Class<?> intentClass;
 
-    public ActivityCard(int backgroundColor, String imgUrl, String activityName, String activityType, @Nullable int pts, Class<?> intentClass) {
+    public ActivityCard(int backgroundColor, String imgUrl, String activityName, String activityType, int pts, Class<?> intentClass) {
         this.backgroundColor = backgroundColor;
         this.imgUrl = imgUrl;
         this.activityName = activityName;

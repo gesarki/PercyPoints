@@ -68,6 +68,7 @@ public class Quiz extends AppCompatActivity {
         TextView questionID = (TextView) findViewById(R.id.QuestionID);
         questionID.setVisibility(View.INVISIBLE);
         questionID.setText("EndGame");
+        MainActivity.changePoints(4);
 
 
     }

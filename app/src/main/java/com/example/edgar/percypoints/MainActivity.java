@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        pointCount = 0;
+        pointCount = 4;
         numPoints = (TextView) findViewById(R.id.numPoints);
-
+        refreshPoint();
 
         // Data Visualization
         DecoView decoView = (DecoView) findViewById(R.id.dynamicArcView);
@@ -107,8 +107,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public static void changePoints(){
-        pointCount += 4;
+    public static void changePoints(int numPts){
+        pointCount += numPts;
         numPoints.setText(Integer.toString(pointCount));
     }
     public static void refreshPoint(){

@@ -41,21 +41,23 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/cardPts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/cardTitle"
-                    android:maxLines="3"
-                    android:padding="8dp"
-                    android:textColor="#FFF"
-                    android:textSize="14dp" />
-
-                <TextView
                     android:id="@+id/cardType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:textColor="#FFF"
+                    android:layout_below="@id/cardTitle"/>
+
+                <TextView
+                    android:id="@+id/cardPts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardType"
+                    android:maxLines="3"
+                    android:padding="8dp"
                     android:layout_alignParentBottom="true"
-                    android:layout_margin="8dp"/>
+                    android:textColor="#FFF"
+                    android:textSize="14dp" />
 
 
 

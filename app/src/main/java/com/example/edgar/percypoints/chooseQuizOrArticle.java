@@ -25,7 +25,7 @@ public class chooseQuizOrArticle extends AppCompatActivity {
     private ListView listView;
     String images [] = {"drawable://" + R.drawable.percy_couch, "drawable://" + R.drawable.percy_ball, "drawable://" + R.drawable.percy_happy,
             "drawable://" + R.drawable.percy_vacay, "drawable://" + R.drawable.percy_palm, "drawable://" + R.drawable.percy_other_couch,
-            "drawable://" + R.drawable.percy_mailbox, "drawable://" + R.drawable.cibc_percy};
+            "drawable://" + R.drawable.percy_mailbox, "drawable://" + R.drawable.cibc_percy,"drawable://" + R.drawable.percy_reward };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,19 +38,24 @@ public class chooseQuizOrArticle extends AppCompatActivity {
 
         ArrayList<ActivityCard> list = new ArrayList<>();
         list.add(new ActivityCard(rgb(0,167,206),
-                images[rand.nextInt(8)],
+                images[3],
                 "Test Your ETF Knowledge!",
                 "Quiz", 4, Quiz.class));
 
         list.add(new ActivityCard(rgb(0,193,181),
-                images[rand.nextInt(8)],
+                images[8],
                 "Learn About Stocks!",
                 "Article", 10,sample_article.class));
 
         list.add(new ActivityCard(rgb(116,168,85),
-                images[rand.nextInt(8)],
-                "Learn About Stocks!",
-                "Article", 10,Quiz.class)); //TODO: CHANGE THIS TO THE ARTICLE
+                images[2],
+                "Tell Us About Yourself!",
+                "Feedback", 10,Quiz.class));
+
+        list.add(new ActivityCard(rgb(116,168,85),
+                images[4],
+                "Shop CIBC Products!",
+                "Feature", 15,Quiz.class));
 
         CustomListAdapter adapter = new CustomListAdapter(this, R.layout.activity_choose_quiz_or_article, list);
 
