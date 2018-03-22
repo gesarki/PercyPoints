@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         decoView.addEvent(new DecoEvent.Builder(62)
                 .setIndex(series1Index)
-                .setDelay(5000)
+                .setDelay(2000)
                 .build());
 
     }
