@@ -47,10 +47,10 @@ public class Quiz extends AppCompatActivity {
         answer2.setText("Electronic Transfer Funds");
         Button answer3 = (Button) findViewById(R.id.answer3);
         answer3.setVisibility(View.VISIBLE);
-        answer3.setText("etf");
+        answer3.setText("Exchange Transfer Funds");
         Button answer4 = (Button) findViewById(R.id.answer4);
         answer4.setVisibility(View.VISIBLE);
-        answer4.setText("ETFF");
+        answer4.setText("Equity Transmission Funds");
     }
     public void end_game(){
         Button answer1 = (Button) findViewById(R.id.answer1);
@@ -125,7 +125,7 @@ public class Quiz extends AppCompatActivity {
 
         }
         else if(questionID.getText().equals("Question 3")){
-            AlertDialog.Builder answerClue3 = CreateAnswer3(true);
+            AlertDialog.Builder answerClue3 = CreateAnswer3(false);
             answerClue3.show();
         }
         else{
@@ -149,7 +149,7 @@ public class Quiz extends AppCompatActivity {
 
         }
         else if(questionID.getText().equals("Question 3")){
-            AlertDialog.Builder answerClue1 = CreateAnswer3(false);
+            AlertDialog.Builder answerClue1 = CreateAnswer3(true);
             answerClue1.show();
         }
         else{
@@ -159,31 +159,31 @@ public class Quiz extends AppCompatActivity {
 
     public void setQ2(){
         TextView QuestionText = (TextView) findViewById(R.id.text_question);
-        QuestionText.setText("What is a mutual Fund!");
+        QuestionText.setText("What is NOT a type of mutual fund?");
         TextView questionID = (TextView) findViewById(R.id.QuestionID);
         questionID.setText("Question 2");
         Button answer1 = (Button) findViewById(R.id.answer1);
-        answer1.setText("Mutual Funds");
+        answer1.setText("Fixed");
         Button answer2 = (Button) findViewById(R.id.answer2);
-        answer2.setText("Mutual Funds");
+        answer2.setText("Trade Income");
         Button answer3 = (Button) findViewById(R.id.answer3);
-        answer3.setText("Mutual");
+        answer3.setText("Balanced Fund");
         Button answer4 = (Button) findViewById(R.id.answer4);
         answer4.setText("Mutual");
     }
     public void setQ3(){
         TextView QuestionText = (TextView) findViewById(R.id.text_question);
-        QuestionText.setText("How do you trade a stock?");
+        QuestionText.setText("Where can you trade with CIBC?");
         TextView questionID = (TextView) findViewById(R.id.QuestionID);
         questionID.setText("Question 3");
         Button answer1 = (Button) findViewById(R.id.answer1);
-        answer1.setText("Asking Grandma");
+        answer1.setText("In Branch");
         Button answer2 = (Button) findViewById(R.id.answer2);
-        answer2.setText("Market");
+        answer2.setText("Online");
         Button answer3 = (Button) findViewById(R.id.answer3);
-        answer3.setText("Opening a brokerage");
+        answer3.setText("Mobile");
         Button answer4 = (Button) findViewById(R.id.answer4);
-        answer4.setText("Mutual");
+        answer4.setText("All of the above");
     }
 
     public AlertDialog.Builder CreateAnswer1(boolean answer){
@@ -194,17 +194,17 @@ public class Quiz extends AppCompatActivity {
             builder = new AlertDialog.Builder(this);
         }
         if(answer){
-            builder.setTitle("Good Job! Correct");
+            builder.setTitle("Good Job!");
         }
         else{
-            builder.setTitle("Almost! The correct answer is: _______");
+            builder.setTitle("Almost! The correct answer is: Exchange-Traded Funds");
         }
-        builder.setMessage("ETF's are used for something")
+        builder.setMessage("An ETF, or exchange-traded fund, is a marketable security that tracks an index, a commodity, bonds, or a basket of assets like an index fund.")
                 .setPositiveButton("Cool!", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                            setQ2();                    }
+                        setQ2();                    }
                 })
-                .setIcon(android.R.drawable.arrow_down_float);
+                .setIcon(android.R.drawable.btn_star);
         return builder;
     }
 
@@ -216,18 +216,17 @@ public class Quiz extends AppCompatActivity {
             builder = new AlertDialog.Builder(this);
         }
         if(answer){
-            builder.setTitle("Good Job! Correct");
+            builder.setTitle("Good Job!");
         }
         else{
-            builder.setTitle("Almost! The correct answer is: _______");
+            builder.setTitle("Almost! The correct answer is: Trade Funds");
         }
-        builder.setMessage("Mutual Funds")
+        builder.setMessage("Mutual funds may include investments in stocks, bonds, options, futures, currencies, treasuries and money market securities.")
                 .setPositiveButton("Cool!", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        setQ3();
-                    }
+                        setQ3();                    }
                 })
-                .setIcon(android.R.drawable.arrow_down_float);
+                .setIcon(android.R.drawable.btn_star);
         return builder;
     }
 
@@ -239,17 +238,18 @@ public class Quiz extends AppCompatActivity {
             builder = new AlertDialog.Builder(this);
         }
         if(answer){
-            builder.setTitle("Good Job! Correct");
+            builder.setTitle("Good Job!");
         }
         else{
-            builder.setTitle("Almost! The correct answer is: _______");
+            builder.setTitle("Almost! The correct answer is: All of the Above!");
         }
-        builder.setMessage("ETF's are used for something")
+        builder.setMessage(
+                "With the CIBC Mobile Wealth App and the Investor’s Edge mobile website you can trade equities, access your accounts, get quotes and monitor the markets from wherever you are.")
                 .setPositiveButton("Cool!", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                                end_game();                    }
+                        end_game();                    }
                 })
-                .setIcon(android.R.drawable.arrow_down_float);
+                .setIcon(android.R.drawable.btn_star);
         return builder;
     }
 
