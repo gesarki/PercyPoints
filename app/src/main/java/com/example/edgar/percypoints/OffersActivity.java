@@ -20,18 +20,18 @@ public class OffersActivity extends AppCompatActivity {
 
         ArrayList<ActivityCard> list = new ArrayList<>();
 
-        list.add(new ActivityCard((Integer)R.color.CIBCBlue,
+        list.add(new ActivityCard(rgb(0,167,206),
                 "drawable://" + R.drawable.percy_couch,
-                "CIBC Aventura VISA Card for students",
-                "Get travel reward for no annual fee. Special offer: double your bonus points - get up to 5,000 Aventura points!", 50, Quiz.class));
+                "Earn 2.5% interest on new deposits into eAdvantage Saving Account!",
+                "", 1000, Quiz.class));
 
-        list.add(new ActivityCard(R.color.CIBCGreen,
+        list.add(new ActivityCard(rgb(0,193,181),
                 "drawable://" + R.drawable.percy_couch,
-                "CIBC Tim Horton's Double Double Visa Card for Students",
-                "Register now and enjoy $20 Tim Cash Welcome Bonus!", 50, Quiz.class));
+                "No fee banking for the next month!",
+                "", 500, Quiz.class));
 
 
-        list.add(new ActivityCard(R.color.CIBCTurquoise,
+        list.add(new ActivityCard(rgb(116,168,85),
                 "drawable://" + R.drawable.percy_couch,
                 "Investors edge",
                 "Register today and your first 5 trades are on us!", 50, Quiz.class));
@@ -41,7 +41,7 @@ public class OffersActivity extends AppCompatActivity {
                 "eAdvantage Saving Account",
                 "Earn 2.3% interest on new deposits!", 50, Quiz.class));
 
-        CustomListAdapter adapter = new CustomListAdapter(this, R.layout.activity_choose_quiz_or_article, list);
+        CustomListAdapter adapter = new CustomListAdapter(this, R.layout.activity_choose_offer, list);
 
         listView.setAdapter(adapter);
 

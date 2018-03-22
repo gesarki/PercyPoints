@@ -76,7 +76,7 @@ class CustomListAdapter extends ArrayAdapter<ActivityCard> {
         //get the persons information
         String title = getItem(position).getActivityName();
         String imgUrl = getItem(position).getImgUrl();
-        int pts = getItem(position).getPts();
+        String pts = Integer.toString(getItem(position).getPts()) + " 🐧points";
         String activityType = getItem(position).getActivityType();
         final Class<?> intentClass = getItem(position).getIntentClass();
         int color = getItem(position).getBackgroundColor();
@@ -118,8 +118,14 @@ class CustomListAdapter extends ArrayAdapter<ActivityCard> {
             lastPosition = position;
 
             holder.title.setText(title);
-            holder.activityType.setText(activityType);
-            holder.pts.setText(Integer.toString(pts));
+
+            try{
+                holder.activityType.setText(activityType);
+            }catch (NullPointerException e) {
+                System.out.println("dw about it");
+            }
+
+            holder.pts.setText((pts));
             holder.card.setBackgroundColor(color);
             holder.startButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
