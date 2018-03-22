@@ -27,6 +27,8 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
+import static android.support.v4.content.ContextCompat.startActivity;
+
 /**
  * Created by edgar on 2018-03-21.
  */
@@ -47,7 +49,7 @@ class CustomListAdapter extends ArrayAdapter<ActivityCard> {
         ImageView image;
         TextView activityType;
         TextView pts;
-        Button startButton;
+        CardView startButton;
         RelativeLayout card;
     }
 
@@ -74,7 +76,7 @@ class CustomListAdapter extends ArrayAdapter<ActivityCard> {
         //get the persons information
         String title = getItem(position).getActivityName();
         String imgUrl = getItem(position).getImgUrl();
-        int pts = getItem(position).getPts();
+        String pts = Integer.toString(getItem(position).getPts()) + " 🐧points";
         String activityType = getItem(position).getActivityType();
         final Class<?> intentClass = getItem(position).getIntentClass();
         int color = getItem(position).getBackgroundColor();
@@ -96,7 +98,7 @@ class CustomListAdapter extends ArrayAdapter<ActivityCard> {
                 holder = new ViewHolder();
                 holder.title = (TextView) convertView.findViewById(R.id.cardTitle);
                 holder.image = (ImageView) convertView.findViewById(R.id.cardImage);
-                holder.startButton = (Button) convertView.findViewById(R.id.startButton);
+                holder.startButton = (CardView) convertView.findViewById(R.id.card_view1);
                 holder.pts = (TextView) convertView.findViewById(R.id.cardPts);
                 holder.activityType = (TextView) convertView.findViewById(R.id.cardType);
                 holder.card = (RelativeLayout) convertView.findViewById(R.id.relView);
@@ -116,13 +118,19 @@ class CustomListAdapter extends ArrayAdapter<ActivityCard> {
             lastPosition = position;
 
             holder.title.setText(title);
-            holder.activityType.setText(activityType);
-            holder.pts.setText(Integer.toString(pts));
+
+            try{
+                holder.activityType.setText(activityType);
+            }catch (NullPointerException e) {
+                System.out.println("dw about it");
+            }
+
+            holder.pts.setText((pts));
             holder.card.setBackgroundColor(color);
             holder.startButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent(v.getContext(),intentClass);
-
+                    startActivity(v.getContext(),intent, null);
                     System.out.println("hit the start button");
                 }
             });

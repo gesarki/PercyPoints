@@ -10,7 +10,7 @@
     <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/card_view1"
             android:layout_width="match_parent"
-            android:layout_height="380dp"
+            android:layout_height="wrap_content"
             android:layout_margin="8dp"
             card_view:cardCornerRadius="15dp">
 
@@ -36,7 +36,7 @@
                     android:layout_below="@+id/cardImage"
                     android:maxLines="3"
                     android:padding="8dp"
-                    android:textColor="#222"
+                    android:textColor="#FFF"
                     android:textSize="22dp"
                     android:textStyle="bold" />
 
@@ -47,15 +47,8 @@
                     android:layout_below="@+id/cardTitle"
                     android:maxLines="3"
                     android:padding="8dp"
-                    android:textColor="#666"
+                    android:textColor="#FFF"
                     android:textSize="14dp" />
-
-                <TextView
-                    android:id="@+id/cardType"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_margin="8dp"/>
 
 
 

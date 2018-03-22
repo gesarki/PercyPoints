@@ -1,6 +1,7 @@
 package com.example.edgar.percypoints;
 
 import android.content.Intent;
+import android.support.annotation.Nullable;
 
 /**
  * Created by edgar on 2018-03-21.
@@ -14,7 +15,7 @@ public class ActivityCard {
     private int pts;
     private Class<?> intentClass;
 
-    public ActivityCard(int backgroundColor, String imgUrl, String activityName, String activityType, int pts, Class<?> intentClass) {
+    public ActivityCard(int backgroundColor, String imgUrl, String activityName, String activityType, @Nullable int pts, Class<?> intentClass) {
         this.backgroundColor = backgroundColor;
         this.imgUrl = imgUrl;
         this.activityName = activityName;

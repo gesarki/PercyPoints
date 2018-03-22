@@ -19,19 +19,14 @@ public class Redemption extends AppCompatActivity {
         numPoints.setText(Integer.toString(MainActivity.pointCount));
     }
 
-    public void redeemCoffee(View view){
-        if(MainActivity.pointCount >= 4){
-            MainActivity.pointCount -= 4;
-            refreshPoint();
-            MainActivity.refreshPoint();
-            Intent intent = new Intent(this, Barcode.class);
-            startActivity(intent);
-        }
-        else{
-            AlertDialog.Builder builder = new AlertDialog.Builder(Redemption.this);
-            builder.setTitle("You don't have enough points!");
-            builder.show();
+    public void openMap(View view) {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
     }
+
+    public void openOffers(View view) {
+        Intent intent = new Intent(this, OffersActivity.class);
+        startActivity(intent);
     }
     public void redeemInterest(View view){
         if(MainActivity.pointCount >= 8){
