@@ -122,6 +122,8 @@ class CustomListAdapter extends ArrayAdapter<ActivityCard> {
             holder.startButton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent(v.getContext(),intentClass);
+
+                    System.out.println("hit the start button");
                 }
             });
 
