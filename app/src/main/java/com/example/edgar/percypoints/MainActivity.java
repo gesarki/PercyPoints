@@ -115,5 +115,11 @@ public class MainActivity extends AppCompatActivity {
         numPoints.setText(Integer.toString(pointCount));
     }
 
+    public void openMaps(View view){
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
+
+
 
 }
