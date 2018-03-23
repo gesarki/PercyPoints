@@ -51,7 +51,7 @@ public class OffersActivity extends AppCompatActivity {
 
 
 
-        CustomListAdapter adapter = new CustomListAdapter(this, R.layout.activity_choose_offer, list);
+        CustomListAdapter adapter = new CustomListAdapter(this, R.layout.activity_choose_quiz_or_article, list);
 
         listView.setAdapter(adapter);
 

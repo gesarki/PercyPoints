@@ -3,13 +3,11 @@ package com.example.edgar.percypoints;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -45,7 +43,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnInfoWi
         // Add a marker in Sydney and move the camera
         LatLng anush= new LatLng(43.6597734,-79.3888088);
         float zoomLevel = 16.0f; //This goes up to 21
-        MarkerOptions anushMarker = new MarkerOptions().position(anush).title("Anush").snippet("Authentic shawarma shop");
+        MarkerOptions anushMarker = new MarkerOptions().position(anush).title("Tutti Frutti").snippet("Hip Candy Store");
 
         mMap.addMarker(anushMarker);
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(anush, zoomLevel));
@@ -57,6 +55,7 @@ public class MapsActivity extends FragmentActivity implements GoogleMap.OnInfoWi
 
     @Override
     public void onInfoWindowClick(Marker marker) {
-        Intent intent = new Intent(this, AnushActivity.class);
+        Intent intent = new Intent(this, TuttiFruttiActivity.class);
+        startActivity(intent);
     }
 }

@@ -47,7 +47,7 @@ public class chooseQuizOrArticle extends AppCompatActivity {
                 "Learn About Stocks!",
                 "Article", 10,sample_article.class));
 
-        list.add(new ActivityCard(rgb(116,168,85),
+        list.add(new ActivityCard(rgb(212,1,57),
                 images[2],
                 "Tell Us About Yourself!",
                 "Feedback", 10,Quiz.class));
