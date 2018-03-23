@@ -40,9 +40,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/my_start_button"
+            android:textColor="@color/colorPrimary"
             android:layout_margin="16dp"
             android:text="Start Trading!"
-            android:textColor="@color/colorPrimary"
             />
 
     </LinearLayout>

@@ -35,12 +35,12 @@ public class TuttiFruttiActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.listView_store);
         ArrayList<ActivityCard> offerList = new ArrayList<>();
-        offerList.add(new ActivityCard(rgb(212,1,57), "drawable://" + R.drawable.tutti_frutti_slushies,
-                "Get a Slushy for 50 cents!", "", 10000, Barcode.class));
 
         offerList.add(new ActivityCard(rgb(116,168,85), "drawable://" + R.drawable.tutti_frutty_candy_heart,
                 "Get 50g of candy for free!", "", 15000, Barcode.class));
 
+        offerList.add(new ActivityCard(rgb(212,1,57), "drawable://" + R.drawable.tutti_frutti_slushies,
+                "Get a Slushy for 50 cents!", "", 10000, Barcode.class));
 
         CustomListAdapter adapter = new CustomListAdapter(this, R.layout.activity_choose_offer, offerList);
 
